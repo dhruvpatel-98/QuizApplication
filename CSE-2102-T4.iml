@@ -7,9 +7,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="google.code.gson" level="project" />
     <orderEntry type="library" exported="" name="hu.blackbelt.bundles.restlet" level="project" />
-    <orderEntry type="library" exported="" name="h2database.h2" level="project" />
     <orderEntry type="library" exported="" name="junit.jupiter" level="project" />
+    <orderEntry type="library" name="apache.commons.csv" level="application" />
+    <orderEntry type="library" name="google.code.gson" level="application" />
+    <orderEntry type="library" name="h2database.h2" level="application" />
+    <orderEntry type="library" name="apache.aries.cdi.owb" level="application" />
   </component>
 </module>

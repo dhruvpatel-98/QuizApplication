@@ -35,23 +35,23 @@ public class TestScoreTable {
 
             stmt = conn.createStatement();
             String sql = "INSERT INTO  score " +
-                    "(usr,questions_total,questions_answered,questions_correct) " +
-                    "VALUES ('Dante OConnor', 88, 87, 1); ";
+                    "(id,questions_total,questions_answered,questions_correct) " +
+                    "VALUES (1, 88, 87, 1); ";
             stmt.executeUpdate(sql);
 
             sql = "INSERT INTO  score " +
-                    "(usr,questions_total,questions_answered,questions_correct) " +
-                    "VALUES ('John Brown', 55, 35, 6); ";
+                    "(id,questions_total,questions_answered,questions_correct) " +
+                    "VALUES (2, 55, 35, 6); ";
             stmt.executeUpdate(sql);
 
             sql = "INSERT INTO  score " +
-                    "(usr,questions_total,questions_answered,questions_correct) " +
-                    "VALUES ('Alex Smith', 50, 40, 5); ";
+                    "(id,questions_total,questions_answered,questions_correct) " +
+                    "VALUES (3, 50, 40, 5); ";
             stmt.executeUpdate(sql);
 
             sql = "INSERT INTO  score " +
-                    "(usr,questions_total,questions_answered,questions_correct) " +
-                    "VALUES ('That Guy', 40, 40, 5); ";
+                    "(id,questions_total,questions_answered,questions_correct) " +
+                    "VALUES (4, 40, 40, 5); ";
             stmt.executeUpdate(sql);
 
 
@@ -61,7 +61,7 @@ public class TestScoreTable {
             // STEP 4 Select the row
             stmt = conn.createStatement();
 
-            sql = "SELECT * FROM score WHERE usr='Dante OConnor';";
+            sql = "SELECT * FROM score WHERE id=1;";
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 String questionsTotal = rs.getString("questions_total");
@@ -77,7 +77,7 @@ public class TestScoreTable {
                 assertEquals(CorrectInt, 1);
             }
 
-            sql = "SELECT * FROM score WHERE usr='John Brown';";
+            sql = "SELECT * FROM score WHERE id =2;";
             ResultSet rs2 = stmt.executeQuery(sql);
             while (rs2.next()) {
                 String questionsTotal = rs2.getString("questions_total");
@@ -93,7 +93,7 @@ public class TestScoreTable {
                 assertEquals(CorrectInt, 6);
             }
 
-            sql = "SELECT * FROM score WHERE usr='Alex Smith';";
+            sql = "SELECT * FROM score WHERE id = 3;";
             ResultSet rs3 = stmt.executeQuery(sql);
             while (rs3.next()) {
                 String questionsTotal = rs3.getString("questions_total");
@@ -109,7 +109,7 @@ public class TestScoreTable {
                 assertEquals(CorrectInt, 5);
             }
 
-            sql = "SELECT * FROM score WHERE usr='That Guy';";
+            sql = "SELECT * FROM score WHERE id = 4;";
             ResultSet rs4 = stmt.executeQuery(sql);
             while (rs4.next()) {
                 String questionsTotal = rs4.getString("questions_total");
@@ -127,10 +127,10 @@ public class TestScoreTable {
 
 
             //STEP 5: Remove the test row
-            sql = "DELETE FROM score WHERE usr='Dante OConnor';"
-                    + "DELETE FROM score WHERE usr='John Brown';"
-                    + "DELETE FROM score WHERE usr='Matthew Dunn';"
-                    + "DELETE FROM score WHERE usr='That Guy'";
+            sql = "DELETE FROM score WHERE id = 1 ;"
+                    + "DELETE FROM score WHERE id = 2;"
+                    + "DELETE FROM score WHERE id = 3;"
+                    + "DELETE FROM score WHERE id = 4";
             stmt.executeUpdate(sql);
 
             System.out.println("Deleted the test rows from the table...");
