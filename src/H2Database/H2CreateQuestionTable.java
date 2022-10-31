@@ -14,7 +14,7 @@ import java.sql.Statement;
 public class H2CreateQuestionTable {
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "org.h2.Driver";
-    static final String DB_URL = "jdbc:h2:~/test"; //
+    static final String DB_URL = "jdbc:h2:~/rest"; //
 
     //  Databases credentials
     static final String USER = "sa";
@@ -37,9 +37,6 @@ public class H2CreateQuestionTable {
             String sql = "CREATE TABLE questions " +
                     "(id INTEGER not NULL AUTO_INCREMENT, " +
                     " question varchar(1024), " +
-                    " a varchar(1024), " +
-                    " b varchar(1024), " +
-                    " c varchar(1024), " +
                     " Answer varchar(1024), " +
                     " PRIMARY KEY ( id ))";
             stmt.executeUpdate(sql);

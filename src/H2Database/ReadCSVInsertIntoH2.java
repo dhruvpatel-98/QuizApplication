@@ -18,7 +18,7 @@ public class ReadCSVInsertIntoH2 {
     private final static String file = CONSTANTS.CsvFileLocation;// CONSTANTS.TestCsvFileLocation;
     // JDBC driver name and database URL
     private static final String JDBC_DRIVER = "org.h2.Driver";
-    private static final String DB_URL = "jdbc:h2:~/test"; //
+    private static final String DB_URL = "jdbc:h2:~/rest"; //
 
     //  Database credentials
     private static final String USER = "sa";
