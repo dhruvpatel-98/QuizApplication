@@ -1,6 +1,6 @@
 # CSE-2102-T4
  
-Inorder to run the code pull doen the repository.
+Inorder to run the code pull down the repository.
 Run each file in H2DateBase.
 Then run each file in UnitTest.
 If you get a error saying the the tables have already been created skip the rest of line 4 and just continue to line 5.
