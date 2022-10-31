@@ -1,13 +1,12 @@
 package H2Database;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import org.apache.commons.csv.*;
 
 import java.io.FileReader;
 import java.io.Reader;
-
-import org.apache.commons.csv.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 /*
  *
