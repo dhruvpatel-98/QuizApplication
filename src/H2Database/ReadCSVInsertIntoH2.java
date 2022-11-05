@@ -19,7 +19,7 @@ public class ReadCSVInsertIntoH2 {
                     "(question,answer) " +
                     "VALUES ('" +
                     question +
-                    "','" +
+                    " " +
                     answer +
                     "'" +
                     "); ";

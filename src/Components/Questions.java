@@ -1,4 +1,4 @@
-package H2Database;
+package Components;
 
 
 public class Questions {
@@ -27,8 +27,6 @@ public class Questions {
         answer = a;
     }
 
-    public String toString() {
-        return "[]";
-    }
+
 
 }
