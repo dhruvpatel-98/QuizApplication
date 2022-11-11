@@ -9,8 +9,9 @@ import java.io.Reader;
 import static H2Database.H2Command.*;
 
 public class ReadCSVInsertIntoH2 {
+    private static CONSTANTS constants;
     // Data file
-    private final static String file = CONSTANTS.CsvFileLocation;
+    private final static String file = constants.CsvFileLocation;
 
     private static void insertIntoH2(int id, String question, String answer) {
         try {
@@ -19,7 +20,7 @@ public class ReadCSVInsertIntoH2 {
                     "(question,answer) " +
                     "VALUES ('" +
                     question +
-                    " " +
+                    "','" +
                     answer +
                     "'" +
                     "); ";
@@ -50,7 +51,6 @@ public class ReadCSVInsertIntoH2 {
                 insertIntoH2(id, question, answer);
                 id += 1;
             }
-
             in.close();
             disconnectFromH2();
         } catch (Exception e) {
