@@ -12,8 +12,8 @@ from flask_cors import CORS, cross_origin
 # On Windows get the the machine's IP address with ipconfig
 # On *nix get the the machine's IP address with iterface config:  ifconfig
 #
-url = 'http://172.31.208.1:8182/'
-
+url = 'http://localhost:8182/'
+#172.31.208.1
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -42,6 +42,10 @@ def store_score():
     response = requests.post(url, headers={'Content-type': "text/html; charset=UTF-8"}, data=myData) # {"a": 1, "b": 2}
     print(response)
     return "good!"
+
+@app.route("/save", methods=['POST', 'PUT'])
+def store_bookmark():
+    value = request.form.get('value')
 
 if __name__=="__main__":
     app.run(port=5000, debug=True)
