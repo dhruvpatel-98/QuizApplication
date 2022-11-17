@@ -12,7 +12,7 @@ function validate_answer(db_answer) {
 	var user_answer = document.getElementById("answer_box").value;
 	console.log(user_answer);
 	console.log(db_answer);
-	if (db_answer == user_answer) {
+	if (db_answer === user_answer) {
 			alert("Yes!");
 		} else {
 			alert("No...: " + db_answer);
@@ -21,7 +21,7 @@ function validate_answer(db_answer) {
 
 async function getData() {
     
-    fetch('http://127.0.0.1:5000/http://localhost:8182/GET').then(function (response) {
+    fetch('http://127.0.0.1:5000').then(function (response) {
         return response.json();
     }).then(function (data) {
         console.log(data);
